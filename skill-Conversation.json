@@ -1,0 +1,531 @@
+{
+  "intents": [
+    {
+      "intent": "bookRooms",
+      "examples": [
+        {
+          "text": "I want to book a room"
+        },
+        {
+          "text": "looking for a room"
+        },
+        {
+          "text": "room"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Contact_info",
+      "examples": [
+        {
+          "text": "contact info"
+        },
+        {
+          "text": "email"
+        },
+        {
+          "text": "info"
+        },
+        {
+          "text": "number"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "goodbyes",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "catch you later"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "nice to meet you"
+        },
+        {
+          "text": "see you soon"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "Hei"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "Hi"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Rooms_type",
+      "examples": [
+        {
+          "text": "Classic Room"
+        },
+        {
+          "text": "Grand Deluxe Room"
+        },
+        {
+          "text": "Ultra Superior Room"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thank_yous",
+      "examples": [
+        {
+          "text": "really appreciate it"
+        },
+        {
+          "text": "thanks"
+        },
+        {
+          "text": "thank you"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "time",
+      "examples": [
+        {
+          "text": "what time is the check in from ?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_3_1627529301758",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Select a Room:Classic Room, Grand Deluxe Room, Ultra Superior Room. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_4_1627532314596",
+      "event_name": "focus",
+      "dialog_node": "handler_10_1627532314596",
+      "previous_sibling": "handler_8_1627532314596"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_7_1627528649555",
+      "event_name": "input",
+      "dialog_node": "handler_2_1627528649564"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1627528667312",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1627528667326",
+      "previous_sibling": "handler_4_1627528667326"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1627528655775",
+      "event_name": "focus",
+      "dialog_node": "handler_3_1627528655784",
+      "previous_sibling": "handler_8_1627528655784"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1627528667312",
+      "event_name": "input",
+      "dialog_node": "handler_4_1627528667326"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_6_1627528661333",
+      "event_name": "input",
+      "dialog_node": "handler_6_1627528661342"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1627531522623",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_7_1627531522624"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_5_1627528655775",
+      "event_name": "input",
+      "dialog_node": "handler_8_1627528655784"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_6_1627528661333",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1627528661342",
+      "previous_sibling": "handler_6_1627528661342"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When do you want to Check out ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_1_1627531610062",
+      "event_name": "focus",
+      "dialog_node": "handler_8_1627531610063",
+      "previous_sibling": "handler_9_1627531610063"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1627532314596",
+      "context": {
+        "Rooms_type": "#Rooms_type"
+      },
+      "conditions": "#Rooms_type",
+      "event_name": "input",
+      "dialog_node": "handler_8_1627532314596"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_7_1627528649555",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1627528649564",
+      "previous_sibling": "handler_2_1627528649564"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When do you want to Check in ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_9_1627531522623",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1627531522624",
+      "previous_sibling": "handler_7_1627531522624"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_1_1627531610062",
+      "context": {
+        "date_2": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_9_1627531610063"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Check in is from 2:00 pm "
+              },
+              {
+                "text": "But if you arrive early and the room is available and ready to move in, you can occupy it."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#time",
+      "dialog_node": "node_3_1627529301758",
+      "previous_sibling": "node_9_1627531309800"
+    },
+    {
+      "type": "frame",
+      "title": "BookRooms",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Your reservation has been confirmed successfully."
+              },
+              {
+                "text": "We wish you a pleasant stay."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#bookRooms",
+      "dialog_node": "node_4_1627523953965",
+      "previous_sibling": "node_5_1627523688186"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Goodbye :)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#goodbyes",
+      "dialog_node": "node_5_1627523688186",
+      "previous_sibling": "node_8_1627523663813"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "title": "Hello dear, how can I help you today?",
+            "options": [],
+            "response_type": "option"
+          }
+        ]
+      },
+      "conditions": "#greetings",
+      "dialog_node": "node_7_1627521426783",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "My pleasure."
+              },
+              {
+                "text": "You're welcome."
+              },
+              {
+                "text": "Glad to help."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#thank_yous",
+      "dialog_node": "node_8_1627523663813",
+      "previous_sibling": "node_7_1627521426783"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You can Contact Us on Email :\n- info@domain.com"
+              },
+              {
+                "text": "Or Call Us : +123 456 7890  "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#Contact_info",
+      "dialog_node": "node_9_1627531309800",
+      "previous_sibling": "node_4_1627523953965"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1627523953965",
+      "variable": "$date_2",
+      "dialog_node": "slot_1_1627531610062",
+      "previous_sibling": "slot_9_1627531522623"
+    },
+    {
+      "type": "slot",
+      "parent": "node_5_1627523688186",
+      "dialog_node": "slot_4_1627528667312"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1627523953965",
+      "variable": "$Rooms_type",
+      "dialog_node": "slot_4_1627532314596",
+      "previous_sibling": "slot_1_1627531610062"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1627521426783",
+      "dialog_node": "slot_5_1627528655775"
+    },
+    {
+      "type": "slot",
+      "parent": "node_8_1627523663813",
+      "dialog_node": "slot_6_1627528661333"
+    },
+    {
+      "type": "slot",
+      "parent": "Welcome",
+      "dialog_node": "slot_7_1627528649555"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1627523953965",
+      "variable": "$date",
+      "dialog_node": "slot_9_1627531522623"
+    },
+    {
+      "type": "frame",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Welcome to Atlantis. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Conversation",
+  "language": "en",
+  "description": ""
+}
