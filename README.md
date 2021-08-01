@@ -50,4 +50,12 @@
 
 <img width="1263" alt="Screen Shot 1442-12-21 at 12 45 52 AM" src="https://user-images.githubusercontent.com/86277104/127756925-9815a2fa-3c64-4605-a5e9-eb01e099074a.png">
 
-## **Final**
+## **Final Overview**
+- I used this Hotel Bootstrap as my website https://uicookies.com/demo/theme/atlantis/, and customized my chatbot to fit some demands of my website.
+
+<img width="1264" alt="11" src="https://user-images.githubusercontent.com/86277104/127757744-0d744db9-a178-4a88-8c53-789751fe7b77.png">
+<img width="1274" alt="Screen Shot 1442-12-22 at 3 36 39 AM" src="https://user-images.githubusercontent.com/86277104/127757754-e7de5fac-92ca-4215-a283-36f9b1c35fb5.png">
+<img width="1262" alt="Screen Shot 1442-12-22 at 3 38 30 AM" src="https://user-images.githubusercontent.com/86277104/127757757-71a70f93-831b-4908-9ca3-31eaddca8cf0.png">
+<img width="1275" alt="Screen Shot 1442-12-22 at 3 38 38 AM" src="https://user-images.githubusercontent.com/86277104/127757759-b4900a6b-8ddf-445f-9bb6-276287b2ce44.png">
+<img width="1273" alt="Screen Shot 1442-12-22 at 3 40 14 AM" src="https://user-images.githubusercontent.com/86277104/127757760-22f575cc-6a3a-419b-83b8-62c57939318d.png">
+
