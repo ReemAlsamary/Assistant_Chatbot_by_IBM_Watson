@@ -3,12 +3,12 @@
 
 ## **Detailed Steps:**
 
-### **1. Create an Account:**
+### **1. Create an Account**
 - To start you need to create an account in IBM Waston Assistant (https://www.ibm.com/sa-en/cloud/watson-assistant). 
-
-#### **2. Create Assistant:**
+___
+#### **2. Create Assistant**
 - Where you'll be asked to give your chatbot a name; once you've done so, click (create assistant) to begin working on it.
-
+___
 <img width="865" alt="1" src="https://user-images.githubusercontent.com/86277104/127725764-73d37ea8-b2cb-4cc6-956d-5616453ac743.png">
 
 ##### 3. Create a Skill 
