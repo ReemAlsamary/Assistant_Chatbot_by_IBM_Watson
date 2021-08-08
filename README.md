@@ -1,7 +1,7 @@
 # Assistant_Chatbot_by_IBM_Watson
 - This task is based on creating an Assistant Chatbot to be integrated later into a web page. This is done by using IBM Waston Assistant.
 
-# **Detailed Steps:**
+# **Detailed Steps:*
 
 ## 1. Create an Account
 - To start you need to create an account in IBM Waston Assistant (https://www.ibm.com/sa-en/cloud/watson-assistant). 
